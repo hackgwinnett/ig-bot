@@ -29,5 +29,5 @@ print("bad ratios:")
 for i in range(0, 10):
     curr_user = following_list[i]
     arr = scraper.get_ratio(curr_user) # [followers, following]
-    if arr[1] - arr[0] >= 100:
+    if arr[1] - arr[0] >= 100 or arr[0] / arr[1] <= 0.8:
         print(curr_user)
